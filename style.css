@@ -1,37 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #222;
+  background: #1e1e1e;
 }
 
 .clock {
-  width: 250px;
-  height: 250px;
-  border: 8px solid white;
+  width: 280px;
+  height: 280px;
+  border: 8px solid #fff;
   border-radius: 50%;
   position: relative;
+  background: #000;
 }
 
+/* Numbers */
+.number {
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.n12 { top: 8%; left: 50%; }
+.n3  { top: 50%; left: 92%; }
+.n6  { top: 92%; left: 50%; }
+.n9  { top: 50%; left: 8%; }
+
+.n1  { top: 18%; left: 72%; }
+.n2  { top: 32%; left: 86%; }
+.n4  { top: 68%; left: 86%; }
+.n5  { top: 82%; left: 72%; }
+
+.n7  { top: 82%; left: 28%; }
+.n8  { top: 68%; left: 14%; }
+.n10 { top: 32%; left: 14%; }
+.n11 { top: 18%; left: 28%; }
+
+/* Hands */
 .hand {
   position: absolute;
-  width: 50%;
-  height: 2px;
-  background: white;
   top: 50%;
-  transform-origin: 100%;
+  left: 50%;
+  transform-origin: 0% 50%;
 }
 
 .hour {
-  height: 4px;
-  width: 35%;
+  width: 60px;
+  height: 6px;
+  background: white;
 }
 
 .minute {
-  height: 3px;
+  width: 90px;
+  height: 4px;
+  background: white;
 }
 
 .second {
+  width: 110px;
+  height: 2px;
   background: red;
 }
+
+.center-dot {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

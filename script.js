@@ -9,9 +9,9 @@ function updateClock() {
   const minutes = now.getMinutes();
   const hours = now.getHours();
 
-  const secondDeg = seconds * 6;
-  const minuteDeg = minutes * 6 + seconds * 0.1;
-  const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+  const secondDeg = seconds * 6 - 90;
+  const minuteDeg = minutes * 6 + seconds * 0.1 - 90;
+  const hourDeg = (hours % 12) * 30 + minutes * 0.5 - 90;
 
   secondHand.style.transform = `rotate(${secondDeg}deg)`;
   minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
